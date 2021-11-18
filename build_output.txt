@@ -1,0 +1,441 @@
+Configuration cache is an incubating feature.
+Calculating task graph as no configuration cache is available for tasks: assembleDebug
+
+> Configure project :app
+--W- The variant: debug, There's no json file
+--W- The variant: release, There's no json file
+
+114 problems were found storing the configuration cache, 2 of which seem unique.
+- Task `:app:transformClassesWithAPMSPluginForDebug` of type `com.android.build.gradle.internal.pipeline.TransformTask`: cannot serialize object of type 'org.gradle.api.internal.artifacts.configurations.DefaultConfigurationContainer', a subtype of 'org.gradle.api.artifacts.ConfigurationContainer', as these are not supported with the configuration cache.
+  See https://docs.gradle.org/7.3/userguide/configuration_cache.html#config_cache:requirements:disallowed_types
+- Task `:app:transformClassesWithAPMSPluginForDebug` of type `com.android.build.gradle.internal.pipeline.TransformTask`: cannot serialize object of type 'org.gradle.api.internal.project.DefaultProject', a subtype of 'org.gradle.api.Project', as these are not supported with the configuration cache.
+  See https://docs.gradle.org/7.3/userguide/configuration_cache.html#config_cache:requirements:disallowed_types
+
+See the complete report at file:///Users/nagy/AndroidStudioProjects/HuaweiConfigurationCacheTest/build/reports/configuration-cache/213gyb2jsrx50vresq17lx6jv/5sj5p9hozr8pn38zhc2pddl2e/configuration-cache-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Configuration cache state could not be cached: field 'transform' from type 'com.android.build.gradle.internal.pipeline.TransformTask': error writing value of type 'com.huawei.agconnect.apms.plugin.APMSTransform'
+> Configuration cache state could not be cached: field 'androidExt' from type 'com.huawei.agconnect.apms.plugin.APMSTransform': error writing value of type 'com.android.build.gradle.internal.dsl.BaseAppModuleExtension'
+   > Configuration cache state could not be cached: field 'publicExtensionImpl' from type 'com.android.build.gradle.internal.dsl.BaseAppModuleExtension': error writing value of type 'com.android.build.gradle.internal.dsl.ApplicationExtensionImpl$AgpDecorated'
+      > Configuration cache state could not be cached: field 'buildTypes' from type 'com.android.build.gradle.internal.dsl.ApplicationExtensionImpl$AgpDecorated': error writing value of type 'org.gradle.api.internal.FactoryNamedDomainObjectContainer'
+         > Configuration cache state could not be cached: field 'eventRegister' from type 'org.gradle.api.internal.FactoryNamedDomainObjectContainer': error writing value of type 'org.gradle.api.internal.collections.DefaultCollectionEventRegister'
+            > Configuration cache state could not be cached: field 'addActions' from type 'org.gradle.api.internal.collections.DefaultCollectionEventRegister': error writing value of type 'org.gradle.internal.ImmutableActionSet$SetWithFewActions'
+               > Configuration cache state could not be cached: field 'actions' from type 'org.gradle.internal.ImmutableActionSet$SetWithFewActions': error writing value of type '[Lorg.gradle.api.Action;'
+                  > Configuration cache state could not be cached: field 'delegate' from type 'org.gradle.api.internal.DefaultCollectionCallbackActionDecorator$BuildOperationEmittingAction': error writing value of type 'org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication$1'
+                     > Configuration cache state could not be cached: field 'val$action' from type 'org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication$1': error writing value of type 'com.android.build.gradle.internal.variant.LegacyVariantInputManager$3'
+                        > Configuration cache state could not be cached: field '$tmp0' from type 'com.android.build.gradle.internal.variant.LegacyVariantInputManager$3': error writing value of type 'com.android.build.gradle.internal.variant.LegacyVariantInputManager'
+                           > Configuration cache state could not be cached: field 'sourceSetManager' from type 'com.android.build.gradle.internal.variant.LegacyVariantInputManager': error writing value of type 'com.android.build.gradle.internal.dependency.SourceSetManager'
+                              > Configuration cache state could not be cached: field 'sourceSetsContainer' from type 'com.android.build.gradle.internal.dependency.SourceSetManager': error writing value of type 'org.gradle.api.internal.FactoryNamedDomainObjectContainer'
+                                 > Configuration cache state could not be cached: field 'eventRegister' from type 'org.gradle.api.internal.FactoryNamedDomainObjectContainer': error writing value of type 'org.gradle.api.internal.collections.DefaultCollectionEventRegister'
+                                    > Configuration cache state could not be cached: field 'addActions' from type 'org.gradle.api.internal.collections.DefaultCollectionEventRegister': error writing value of type 'org.gradle.internal.ImmutableActionSet$SetWithFewActions'
+                                       > Configuration cache state could not be cached: field 'actions' from type 'org.gradle.internal.ImmutableActionSet$SetWithFewActions': error writing value of type '[Lorg.gradle.api.Action;'
+                                          > Configuration cache state could not be cached: field 'delegate' from type 'org.gradle.api.internal.DefaultCollectionCallbackActionDecorator$BuildOperationEmittingAction': error writing value of type 'org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication$1'
+                                             > Configuration cache state could not be cached: field 'val$action' from type 'org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication$1': error writing value of type 'org.jetbrains.kotlin.gradle.plugin.mpp.SyncKotlinAndAndroidSourceSetsKt$syncKotlinAndAndroidSourceSets$1'
+                                                > Configuration cache state could not be cached: field '$target' from type 'org.jetbrains.kotlin.gradle.plugin.mpp.SyncKotlinAndAndroidSourceSetsKt$syncKotlinAndAndroidSourceSets$1': error writing value of type 'org.jetbrains.kotlin.gradle.plugin.mpp.KotlinAndroidTarget'
+                                                   > Configuration cache state could not be cached: field 'compilations' from type 'org.jetbrains.kotlin.gradle.plugin.mpp.KotlinAndroidTarget': error writing value of type 'org.gradle.api.internal.FactoryNamedDomainObjectContainer'
+                                                      > Configuration cache state could not be cached: field 'index' from type 'org.gradle.api.internal.FactoryNamedDomainObjectContainer': error writing value of type 'org.gradle.api.internal.DefaultNamedDomainObjectCollection$UnfilteredIndex'
+                                                         > Configuration cache state could not be cached: field 'map' from type 'org.gradle.api.internal.DefaultNamedDomainObjectCollection$UnfilteredIndex': error writing value of type 'java.util.TreeMap'
+                                                            > Configuration cache state could not be cached: field 'androidVariant' from type 'org.jetbrains.kotlin.gradle.plugin.mpp.KotlinJvmAndroidCompilation': error writing value of type 'com.android.build.gradle.internal.api.ApplicationVariantImpl'
+                                                               > Configuration cache state could not be cached: field 'testVariant' from type 'com.android.build.gradle.internal.api.ApplicationVariantImpl': error writing value of type 'com.android.build.gradle.internal.api.TestVariantImpl'
+                                                                  > Configuration cache state could not be cached: field 'variantData' from type 'com.android.build.gradle.internal.api.TestVariantImpl': error writing value of type 'com.android.build.gradle.internal.variant.TestVariantData'
+                                                                     > Configuration cache state could not be cached: field 'testedVariantData' from type 'com.android.build.gradle.internal.variant.TestVariantData': error writing value of type 'com.android.build.gradle.internal.variant.ApplicationVariantData'
+                                                                        > Configuration cache state could not be cached: field 'artifacts' from type 'com.android.build.gradle.internal.variant.ApplicationVariantData': error writing value of type 'com.android.build.api.artifact.impl.ArtifactsImpl'
+                                                                           > Configuration cache state could not be cached: field 'storageProvider' from type 'com.android.build.api.artifact.impl.ArtifactsImpl': error writing value of type 'com.android.build.api.artifact.impl.StorageProviderImpl'
+                                                                              > Configuration cache state could not be cached: field 'fileStorage' from type 'com.android.build.api.artifact.impl.StorageProviderImpl': error writing value of type 'com.android.build.api.artifact.impl.TypedStorageProvider'
+                                                                                 > Configuration cache state could not be cached: field 'singleStorage' from type 'com.android.build.api.artifact.impl.TypedStorageProvider': error writing value of type 'java.util.LinkedHashMap'
+                                                                                    > java.util.ConcurrentModificationException (no error message)
+
+* Try:
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+
+* Exception is:
+org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'transform' from type 'com.android.build.gradle.internal.pipeline.TransformTask': error writing value of type 'com.huawei.agconnect.apms.plugin.APMSTransform'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriter.writeStateOf(BeanPropertyWriter.kt:59)
+	at org.gradle.configurationcache.serialization.codecs.TaskNodeCodec.writeTask(TaskNodeCodec.kt:98)
+	at org.gradle.configurationcache.serialization.codecs.TaskNodeCodec.encode(TaskNodeCodec.kt:71)
+	at org.gradle.configurationcache.serialization.codecs.TaskNodeCodec.encode(TaskNodeCodec.kt:64)
+	at org.gradle.configurationcache.serialization.codecs.BindingsBackedCodec.encode(BindingsBackedCodec.kt:57)
+	at org.gradle.configurationcache.serialization.DefaultWriteContext.write(Contexts.kt:83)
+	at org.gradle.configurationcache.serialization.codecs.WorkNodeCodec.writeNode(WorkNodeCodec.kt:77)
+	at org.gradle.configurationcache.serialization.codecs.WorkNodeCodec.writeNodes(WorkNodeCodec.kt:54)
+	at org.gradle.configurationcache.serialization.codecs.WorkNodeCodec.writeWork(WorkNodeCodec.kt:39)
+	at org.gradle.configurationcache.ConfigurationCacheState.writeWorkGraphOf(ConfigurationCacheState.kt:248)
+	at org.gradle.configurationcache.ConfigurationCacheState.writeBuildState$configuration_cache(ConfigurationCacheState.kt:201)
+	at org.gradle.configurationcache.ConfigurationCacheState.writeRootBuild(ConfigurationCacheState.kt:162)
+	at org.gradle.configurationcache.ConfigurationCacheState.writeRootBuildState(ConfigurationCacheState.kt:108)
+	at org.gradle.configurationcache.ConfigurationCacheIO$writeRootBuildStateTo$1.invokeSuspend(ConfigurationCacheIO.kt:63)
+	at org.gradle.configurationcache.ConfigurationCacheIO$writeRootBuildStateTo$1.invoke(ConfigurationCacheIO.kt)
+	at org.gradle.configurationcache.ConfigurationCacheIO$writeConfigurationCacheState$$inlined$useToRun$lambda$1.invokeSuspend(ConfigurationCacheIO.kt:114)
+	at org.gradle.configurationcache.ConfigurationCacheIO$writeConfigurationCacheState$$inlined$useToRun$lambda$1.invoke(ConfigurationCacheIO.kt)
+	at org.gradle.configurationcache.serialization.RunningKt$runWriteOperation$1.invokeSuspend(Running.kt:45)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlin.coroutines.ContinuationKt.startCoroutine(Continuation.kt:115)
+	at org.gradle.configurationcache.serialization.RunningKt.runToCompletion(Running.kt:56)
+	at org.gradle.configurationcache.serialization.RunningKt.runWriteOperation(Running.kt:44)
+	at org.gradle.configurationcache.ConfigurationCacheIO.writeConfigurationCacheState(ConfigurationCacheIO.kt:113)
+	at org.gradle.configurationcache.ConfigurationCacheIO.writeRootBuildStateTo$configuration_cache(ConfigurationCacheIO.kt:61)
+	at org.gradle.configurationcache.DefaultConfigurationCache$writeConfigurationCacheState$1.create(DefaultConfigurationCache.kt:327)
+	at org.gradle.configurationcache.DefaultConfigurationCache$writeConfigurationCacheState$1.create(DefaultConfigurationCache.kt:47)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry.withMutableStateOfAllProjects(DefaultProjectStateRegistry.java:160)
+	at org.gradle.configurationcache.DefaultConfigurationCache.writeConfigurationCacheState(DefaultConfigurationCache.kt:326)
+	at org.gradle.configurationcache.DefaultConfigurationCache.access$writeConfigurationCacheState(DefaultConfigurationCache.kt:47)
+	at org.gradle.configurationcache.DefaultConfigurationCache$saveWorkGraph$1.invoke(DefaultConfigurationCache.kt:245)
+	at org.gradle.configurationcache.DefaultConfigurationCache$saveWorkGraph$1.invoke(DefaultConfigurationCache.kt:47)
+	at org.gradle.configurationcache.DefaultConfigurationCache$saveToCache$1$1.invoke(DefaultConfigurationCache.kt:264)
+	at org.gradle.configurationcache.DefaultConfigurationCache$saveToCache$1$1.invoke(DefaultConfigurationCache.kt:47)
+	at org.gradle.configurationcache.ConfigurationCacheRepository$useForStore$1.invoke(ConfigurationCacheRepository.kt:91)
+	at org.gradle.configurationcache.ConfigurationCacheRepository$useForStore$1.invoke(ConfigurationCacheRepository.kt:43)
+	at org.gradle.configurationcache.ConfigurationCacheRepository$withBaseCacheDirFor$1.create(ConfigurationCacheRepository.kt:202)
+	at org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess.withFileLock(LockOnDemandCrossProcessCacheAccess.java:90)
+	at org.gradle.cache.internal.DefaultCacheAccess.withFileLock(DefaultCacheAccess.java:191)
+	at org.gradle.cache.internal.DefaultPersistentDirectoryStore.withFileLock(DefaultPersistentDirectoryStore.java:188)
+	at org.gradle.cache.internal.DefaultCacheFactory$ReferenceTrackingCache.withFileLock(DefaultCacheFactory.java:209)
+	at org.gradle.configurationcache.ConfigurationCacheRepository.withBaseCacheDirFor(ConfigurationCacheRepository.kt:200)
+	at org.gradle.configurationcache.ConfigurationCacheRepository.useForStore(ConfigurationCacheRepository.kt:82)
+	at org.gradle.configurationcache.DefaultConfigurationCache$saveToCache$1.invoke(DefaultConfigurationCache.kt:259)
+	at org.gradle.configurationcache.DefaultConfigurationCache$saveToCache$1.invoke(DefaultConfigurationCache.kt:47)
+	at org.gradle.configurationcache.ConfigurationCacheBuildOperationsKt$withOperation$1.call(ConfigurationCacheBuildOperations.kt:43)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.configurationcache.ConfigurationCacheBuildOperationsKt.withOperation(ConfigurationCacheBuildOperations.kt:37)
+	at org.gradle.configurationcache.ConfigurationCacheBuildOperationsKt.withStoreOperation(ConfigurationCacheBuildOperations.kt:32)
+	at org.gradle.configurationcache.DefaultConfigurationCache.saveToCache(DefaultConfigurationCache.kt:258)
+	at org.gradle.configurationcache.DefaultConfigurationCache.saveWorkGraph(DefaultConfigurationCache.kt:245)
+	at org.gradle.configurationcache.DefaultConfigurationCache.access$saveWorkGraph(DefaultConfigurationCache.kt:47)
+	at org.gradle.configurationcache.DefaultConfigurationCache$loadOrScheduleRequestedTasks$1.invoke(DefaultConfigurationCache.kt:119)
+	at org.gradle.configurationcache.DefaultConfigurationCache$loadOrScheduleRequestedTasks$1.invoke(DefaultConfigurationCache.kt:47)
+	at org.gradle.configurationcache.DefaultConfigurationCache.runWorkThatContributesToCacheEntry(DefaultConfigurationCache.kt:218)
+	at org.gradle.configurationcache.DefaultConfigurationCache.loadOrScheduleRequestedTasks(DefaultConfigurationCache.kt:117)
+	at org.gradle.configurationcache.ConfigurationCacheAwareBuildTreeWorkPreparer.scheduleRequestedTasks(ConfigurationCacheAwareBuildTreeWorkPreparer.kt:27)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$doScheduleAndRunTasks$2(DefaultBuildTreeLifecycleController.java:86)
+	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph.withNewTaskGraph(DefaultIncludedBuildTaskGraph.java:94)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.doScheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:85)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$runBuild$4(DefaultBuildTreeLifecycleController.java:103)
+	at org.gradle.internal.build.StateTransitionController.lambda$transition$0(StateTransitionController.java:145)
+	at org.gradle.internal.build.StateTransitionController.doTransition(StateTransitionController.java:243)
+	at org.gradle.internal.build.StateTransitionController.transition(StateTransitionController.java:145)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.runBuild(DefaultBuildTreeLifecycleController.java:100)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:66)
+	at org.gradle.tooling.internal.provider.ExecuteBuildActionRunner.run(ExecuteBuildActionRunner.java:31)
+	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+	at org.gradle.internal.buildtree.ProblemReportingBuildActionRunner.run(ProblemReportingBuildActionRunner.java:49)
+	at org.gradle.launcher.exec.BuildOutcomeReportingBuildActionRunner.run(BuildOutcomeReportingBuildActionRunner.java:69)
+	at org.gradle.tooling.internal.provider.FileSystemWatchingBuildActionRunner.run(FileSystemWatchingBuildActionRunner.java:114)
+	at org.gradle.launcher.exec.BuildCompletionNotifyingBuildActionRunner.run(BuildCompletionNotifyingBuildActionRunner.java:41)
+	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.lambda$execute$0(RootBuildLifecycleBuildActionExecutor.java:40)
+	at org.gradle.composite.internal.DefaultRootBuildState.run(DefaultRootBuildState.java:155)
+	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.execute(RootBuildLifecycleBuildActionExecutor.java:40)
+	at org.gradle.internal.buildtree.DefaultBuildTreeContext.execute(DefaultBuildTreeContext.java:40)
+	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.lambda$execute$0(BuildTreeLifecycleBuildActionExecutor.java:65)
+	at org.gradle.internal.buildtree.BuildTreeState.run(BuildTreeState.java:53)
+	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.execute(BuildTreeLifecycleBuildActionExecutor.java:65)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:61)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:57)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor.execute(RunAsBuildOperationBuildActionExecutor.java:57)
+	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.lambda$execute$0(RunAsWorkerThreadBuildActionExecutor.java:38)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:211)
+	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.execute(RunAsWorkerThreadBuildActionExecutor.java:38)
+	at org.gradle.tooling.internal.provider.ContinuousBuildActionExecutor.execute(ContinuousBuildActionExecutor.java:103)
+	at org.gradle.tooling.internal.provider.SubscribableBuildActionExecutor.execute(SubscribableBuildActionExecutor.java:64)
+	at org.gradle.internal.session.DefaultBuildSessionContext.execute(DefaultBuildSessionContext.java:46)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter$ActionImpl.apply(BuildSessionLifecycleBuildActionExecuter.java:100)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter$ActionImpl.apply(BuildSessionLifecycleBuildActionExecuter.java:88)
+	at org.gradle.internal.session.BuildSessionState.run(BuildSessionState.java:69)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter.execute(BuildSessionLifecycleBuildActionExecuter.java:62)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter.execute(BuildSessionLifecycleBuildActionExecuter.java:41)
+	at org.gradle.tooling.internal.provider.GradleThreadBuildActionExecuter.execute(GradleThreadBuildActionExecuter.java:36)
+	at org.gradle.tooling.internal.provider.GradleThreadBuildActionExecuter.execute(GradleThreadBuildActionExecuter.java:25)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:63)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:31)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:58)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:42)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:47)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:31)
+	at org.gradle.launcher.daemon.server.exec.ExecuteBuild.doBuild(ExecuteBuild.java:65)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.WatchForDisconnection.execute(WatchForDisconnection.java:39)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ResetDeprecationLogger.execute(ResetDeprecationLogger.java:29)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon.execute(RequestStopIfSingleUsedDaemon.java:35)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:78)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:75)
+	at org.gradle.util.internal.Swapper.swap(Swapper.java:38)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.execute(ForwardClientInput.java:75)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogAndCheckHealth.execute(LogAndCheckHealth.java:55)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogToClient.doBuild(LogToClient.java:63)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment.doBuild(EstablishBuildEnvironment.java:84)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy$1.run(StartBuildOrRespondWithBusy.java:52)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator$1.run(DaemonStateCoordinator.java:297)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:61)
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'androidExt' from type 'com.huawei.agconnect.apms.plugin.APMSTransform': error writing value of type 'com.android.build.gradle.internal.dsl.BaseAppModuleExtension'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.SafeContinuation.resumeWith(SafeContinuationJvm.kt:41)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1$encodeLoop$$inlined$Continuation$1.resumeWith(Continuation.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlin.coroutines.ContinuationKt.startCoroutine(Continuation.kt:115)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1.encodeLoop(Combinators.kt:142)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$reentrant$1.encode(Combinators.kt:112)
+	at org.gradle.configurationcache.serialization.codecs.BindingsBackedCodec.encode(BindingsBackedCodec.kt:57)
+	at org.gradle.configurationcache.serialization.DefaultWriteContext.write(Contexts.kt:83)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:100)
+	... 142 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'publicExtensionImpl' from type 'com.android.build.gradle.internal.dsl.BaseAppModuleExtension': error writing value of type 'com.android.build.gradle.internal.dsl.ApplicationExtensionImpl$AgpDecorated'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 232 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'buildTypes' from type 'com.android.build.gradle.internal.dsl.ApplicationExtensionImpl$AgpDecorated': error writing value of type 'org.gradle.api.internal.FactoryNamedDomainObjectContainer'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 229 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'eventRegister' from type 'org.gradle.api.internal.FactoryNamedDomainObjectContainer': error writing value of type 'org.gradle.api.internal.collections.DefaultCollectionEventRegister'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 226 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'addActions' from type 'org.gradle.api.internal.collections.DefaultCollectionEventRegister': error writing value of type 'org.gradle.internal.ImmutableActionSet$SetWithFewActions'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 223 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'actions' from type 'org.gradle.internal.ImmutableActionSet$SetWithFewActions': error writing value of type '[Lorg.gradle.api.Action;'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 220 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'delegate' from type 'org.gradle.api.internal.DefaultCollectionCallbackActionDecorator$BuildOperationEmittingAction': error writing value of type 'org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication$1'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 217 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'val$action' from type 'org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication$1': error writing value of type 'com.android.build.gradle.internal.variant.LegacyVariantInputManager$3'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 214 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field '$tmp0' from type 'com.android.build.gradle.internal.variant.LegacyVariantInputManager$3': error writing value of type 'com.android.build.gradle.internal.variant.LegacyVariantInputManager'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 211 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'sourceSetManager' from type 'com.android.build.gradle.internal.variant.LegacyVariantInputManager': error writing value of type 'com.android.build.gradle.internal.dependency.SourceSetManager'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 208 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'sourceSetsContainer' from type 'com.android.build.gradle.internal.dependency.SourceSetManager': error writing value of type 'org.gradle.api.internal.FactoryNamedDomainObjectContainer'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 205 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'eventRegister' from type 'org.gradle.api.internal.FactoryNamedDomainObjectContainer': error writing value of type 'org.gradle.api.internal.collections.DefaultCollectionEventRegister'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 202 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'addActions' from type 'org.gradle.api.internal.collections.DefaultCollectionEventRegister': error writing value of type 'org.gradle.internal.ImmutableActionSet$SetWithFewActions'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 199 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'actions' from type 'org.gradle.internal.ImmutableActionSet$SetWithFewActions': error writing value of type '[Lorg.gradle.api.Action;'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 196 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'delegate' from type 'org.gradle.api.internal.DefaultCollectionCallbackActionDecorator$BuildOperationEmittingAction': error writing value of type 'org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication$1'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 193 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'val$action' from type 'org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication$1': error writing value of type 'org.jetbrains.kotlin.gradle.plugin.mpp.SyncKotlinAndAndroidSourceSetsKt$syncKotlinAndAndroidSourceSets$1'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 190 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field '$target' from type 'org.jetbrains.kotlin.gradle.plugin.mpp.SyncKotlinAndAndroidSourceSetsKt$syncKotlinAndAndroidSourceSets$1': error writing value of type 'org.jetbrains.kotlin.gradle.plugin.mpp.KotlinAndroidTarget'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 187 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'compilations' from type 'org.jetbrains.kotlin.gradle.plugin.mpp.KotlinAndroidTarget': error writing value of type 'org.gradle.api.internal.FactoryNamedDomainObjectContainer'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 184 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'index' from type 'org.gradle.api.internal.FactoryNamedDomainObjectContainer': error writing value of type 'org.gradle.api.internal.DefaultNamedDomainObjectCollection$UnfilteredIndex'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 181 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'map' from type 'org.gradle.api.internal.DefaultNamedDomainObjectCollection$UnfilteredIndex': error writing value of type 'java.util.TreeMap'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 178 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'androidVariant' from type 'org.jetbrains.kotlin.gradle.plugin.mpp.KotlinJvmAndroidCompilation': error writing value of type 'com.android.build.gradle.internal.api.ApplicationVariantImpl'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 175 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'testVariant' from type 'com.android.build.gradle.internal.api.ApplicationVariantImpl': error writing value of type 'com.android.build.gradle.internal.api.TestVariantImpl'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 172 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'variantData' from type 'com.android.build.gradle.internal.api.TestVariantImpl': error writing value of type 'com.android.build.gradle.internal.variant.TestVariantData'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 169 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'testedVariantData' from type 'com.android.build.gradle.internal.variant.TestVariantData': error writing value of type 'com.android.build.gradle.internal.variant.ApplicationVariantData'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 166 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'artifacts' from type 'com.android.build.gradle.internal.variant.ApplicationVariantData': error writing value of type 'com.android.build.api.artifact.impl.ArtifactsImpl'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 163 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'storageProvider' from type 'com.android.build.api.artifact.impl.ArtifactsImpl': error writing value of type 'com.android.build.api.artifact.impl.StorageProviderImpl'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 160 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'fileStorage' from type 'com.android.build.api.artifact.impl.StorageProviderImpl': error writing value of type 'com.android.build.api.artifact.impl.TypedStorageProvider'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 157 more
+Caused by: org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field 'singleStorage' from type 'com.android.build.api.artifact.impl.TypedStorageProvider': error writing value of type 'java.util.LinkedHashMap'
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:106)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt$writeNextProperty$1.invokeSuspend(BeanPropertyWriter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	... 154 more
+Caused by: java.util.ConcurrentModificationException
+	at org.gradle.configurationcache.serialization.CombinatorsKt.writeMapEntries(Combinators.kt:247)
+	at org.gradle.configurationcache.serialization.CombinatorsKt$writeMapEntries$1.invokeSuspend(Combinators.kt)
+	... 155 more
+
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 2s
+Configuration cache entry discarded with 114 problems.
