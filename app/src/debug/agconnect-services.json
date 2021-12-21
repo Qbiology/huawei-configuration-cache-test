@@ -1,0 +1,27 @@
+{
+	"agcgw":{
+		"backurl":"xxx",
+		"url":"xxx"
+	},
+	"client":{
+		"cp_id":"xxx",
+		"product_id":"xxx",
+		"client_id":"xxx",
+		"client_secret":"xxx",
+		"app_id":"xxx",
+		"package_name":"sk.ferini.agcpcachetest",
+		"api_key":"xxx"
+	},
+	"service":{
+		"analytics":{
+			"collector_url":"xxx",
+			"resource_id":"xxxx",
+			"channel_id":""
+		},
+		"ml":{
+			"mlservice_url":"xxx"
+		}
+	},
+	"region":"xxx",
+	"configuration_version":"1.0"
+}

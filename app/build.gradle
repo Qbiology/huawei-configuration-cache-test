@@ -4,6 +4,10 @@ plugins {
     id 'com.huawei.agconnect'
 }
 
+agcp {
+    manifest = true // change to false to fix build with configuration cache
+}
+
 android {
     compileSdk 31
 
